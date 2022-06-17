@@ -6,14 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import cheers.lovetospooch.appnews.R
+import cheers.lovetospooch.appnews.databinding.FragmentSearchBinding
 
 class SearchFragment: Fragment() {
+
+    private var _binding: FragmentSearchBinding? = null
+    private val mBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        _binding = FragmentSearchBinding.inflate(layoutInflater, container, false)
+        return mBinding.root
     }
 }
