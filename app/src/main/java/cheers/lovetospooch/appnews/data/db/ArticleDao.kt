@@ -1,4 +1,4 @@
-package cheers.lovetospooch.appnews.data.api.db
+package cheers.lovetospooch.appnews.data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.Delete

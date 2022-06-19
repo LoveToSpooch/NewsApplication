@@ -1,4 +1,4 @@
-package cheers.lovetospooch.appnews.data.api.db
+package cheers.lovetospooch.appnews.data.db
 
 import android.content.Context
 import androidx.room.Room

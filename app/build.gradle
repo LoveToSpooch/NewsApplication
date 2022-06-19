@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
     id 'dagger.hilt.android.plugin'
+
 }
 
 android {
@@ -68,10 +69,10 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
 
-// Hilt
-    def hiltVersion = "2.41"
-    implementation "com.google.dagger:hilt-android:$hiltVersion"
-    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+//// Hilt
+//    def hiltVersion = "2.41"
+//    implementation "com.google.dagger:hilt-android:$hiltVersion"
+//    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
 
 
 // Retrofit
@@ -92,4 +93,20 @@ dependencies {
     def glideVersion = "4.13.0"
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+// Hilt
+    implementation 'com.google.dagger:hilt-android:2.42'
+    kapt 'com.google.dagger:hilt-compiler:2.42'
+
+    // For instrumentation tests
+    androidTestImplementation  'com.google.dagger:hilt-android-testing:2.42'
+    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.42'
+
+    // For local unit tests
+    testImplementation 'com.google.dagger:hilt-android-testing:2.42'
+    kaptTest 'com.google.dagger:hilt-compiler:2.42'
+}
+
+kapt {
+    correctErrorTypes true
 }
