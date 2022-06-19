@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import cheers.lovetospooch.appnews.R
 import cheers.lovetospooch.appnews.databinding.FragmentSplashBinding
 
 class SplashFragment: Fragment() {
