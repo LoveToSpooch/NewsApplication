@@ -3,4 +3,6 @@
     <string name="splash_text">News</string>
     <string name="my_news_text">My News</string>
     <string name="text_popular_news">Popular News</string>
+    <string name="text_search">Search</string>
+    <string name="text_hint_search_what_news">What News</string>
 </resources>
