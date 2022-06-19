@@ -5,4 +5,6 @@
     <string name="text_popular_news">Popular News</string>
     <string name="text_search">Search</string>
     <string name="text_hint_search_what_news">What News</string>
+    <string name="text_description_details">Description</string>
+    <string name="btn_visit_site">Visit site</string>
 </resources>

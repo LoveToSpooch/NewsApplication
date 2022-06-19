@@ -6,10 +6,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import cheers.lovetospooch.appnews.R
 import cheers.lovetospooch.appnews.databinding.FragmentSearchBinding
 import cheers.lovetospooch.appnews.ui.adapters.NewsAdapter
 import cheers.lovetospooch.appnews.utils.Resource
@@ -75,6 +78,14 @@ class SearchFragment: Fragment() {
                     searchProgressbar.visibility = View.VISIBLE
                 }
             }
+        }
+
+        newsAdapter.setOnItemClickListener {
+            val bundle = bundleOf("article" to it)
+            view.findNavController().navigate(
+                R.id.action_searchFragment_to_detailsFragment,
+                bundle
+            )
         }
     }
 

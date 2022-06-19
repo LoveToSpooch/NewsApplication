@@ -23,7 +23,6 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
             return oldItem == newItem
         }
-
     }
 
     val differ = AsyncListDiffer(this, callback)
@@ -42,6 +41,10 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
             itemArticleImage.clipToOutline = true
             itemTextArticle.text = article.title
             itemTextDateTime.text = article.publishedAt
+
+            setOnClickListener {
+                onItemClickListener?.let { it(article) }
+            }
         }
     }
 
