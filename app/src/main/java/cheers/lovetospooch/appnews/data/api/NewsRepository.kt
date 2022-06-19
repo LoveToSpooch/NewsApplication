@@ -1,6 +1,6 @@
 package cheers.lovetospooch.appnews.data.api
 
-import android.app.DownloadManager
+
 import javax.inject.Inject
 
 class NewsRepository @Inject constructor(private val newsService: NewsService) {

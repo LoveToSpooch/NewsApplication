@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="cheers.lovetospooch.appnews.ui.details.DetailsFragment"
-        android:label="DetailsFragment" />
+        android:label="DetailsFragment" >
+        <argument
+            android:name="article"
+            app:argType="cheers.lovetospooch.appnews.models.Article" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="cheers.lovetospooch.appnews.ui.favorite.FavoriteFragment"
